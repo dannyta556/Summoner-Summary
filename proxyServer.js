@@ -124,34 +124,7 @@ app.get('/summary', async (req, res) => {
         } else {
             position = 3;
         }
-        //console.log(playerRank[0])
-        //const API_CALL = "https://americas.api.riotgames.com" + "/lol/match/v5/matches/by-puuid/" + PUUID + "/ids" + "?api_key=" + API_KEY
 
-        // get API_CALL
-        // its going to give us a list of game IDs
-        /*
-        const gameIDs = await axios.get(API_CALL)
-            .then(response => response.data)
-            .catch(err => err)
-    
-        // list of game ID strings
-        console.log(gameIDs)
-        */
-        /*
-        // loop through game IDs
-        // at each loop, get the info based off ID
-        var matchDataArray = []
-        for (var i = 0; i < gameIDs.length - 15; i++) {
-            const matchID = gameIDs[i]
-            const matchData = await axios.get("https://americas.api.riotgames.com" + "/lol/match/v5/matches/" + matchID + "?api_key=" + API_KEY)
-                .then(response => response.data)
-                .catch(err => err)
-            matchDataArray.push(matchData)
-        }
-    
-        // save information above in an array, give array as JSON response to user
-        res.json(matchDataArray)
-        */
         if (position !== 3) {
             returnRank = playerRank[position].rank
             returnTier = playerRank[position].tier
